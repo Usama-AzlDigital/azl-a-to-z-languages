@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WebWayToKorea | Contact</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AZL Digital | Contact</title>
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {margin:0;font-family:'Segoe UI',sans-serif;}
+    nav {
+      display:flex; justify-content:space-between; align-items:center; padding:15px 50px; background-color:#004080; color:#fff; position:sticky; top:0; z-index:1000;
+    }
+    nav .logo {font-size:1.8rem; font-weight:bold; color:#ffd700; text-shadow:1px 1px 3px rgba(0,0,0,0.4);}
+    nav ul {display:flex; gap:25px; list-style:none;}
+    nav ul li a {color:#fff; text-decoration:none; font-weight:500; transition:0.3s;}
+    nav ul li a:hover, nav ul li a.active {color:#ffd700;}
+
+    /* Hero */
+    .hero {background:url('images/Traveler.avif') center/cover no-repeat; height:300px; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; position:relative;}
+    .hero::before {content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4);}
+    .hero-content {position:relative; max-width:900px;}
+    .hero-content h1 {font-size:2.8rem; margin-bottom:10px;}
+    .hero-content p {font-size:1.2rem;}
+
+    /* Contact Section */
+    .contact-section {padding:60px 20px; max-width:1000px; margin:auto;}
+    .contact-section h2 {text-align:center; color:#004080; font-size:2.2rem; margin-bottom:30px;}
+    .contact-container {display:flex; flex-wrap:wrap; gap:40px; justify-content:center;}
+    .contact-info, .contact-form {flex:1; min-width:300px;}
+    .contact-info h3 {color:#004080; margin-bottom:15px;}
+    .contact-info p, .contact-info a {line-height:1.6; font-size:1rem; text-decoration:none; color:#004080;}
+    .contact-form form {display:flex; flex-direction:column; gap:15px;}
+    .contact-form input, .contact-form textarea {padding:12px; border-radius:5px; border:1px solid #ccc; font-size:1rem; width:100%; box-sizing:border-box;}
+    .contact-form button {padding:12px; background-color:#ffd700; color:#004080; font-weight:bold; border:none; border-radius:5px; cursor:pointer; transition:0.3s;}
+    .contact-form button:hover {background-color:#e6c200;}
+
+    footer {background:#004080; color:#fff; text-align:center; padding:20px;}
+    footer a {color:#ffd700; text-decoration:none;}
+
+    @media(max-width:900px){
+      .hero-content h1{font-size:2rem;}
+      .contact-container {flex-direction:column;}
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navigation -->
   <nav>
-    <div class="logo">WebWayToKorea</div>
+    <div class="logo">AZL Digital</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="vision.html">Our Vision</a></li>
@@ -21,43 +58,49 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1581092334257-7d6b92f3a79b');">
-    <div class="hero-text">
-      <h1>Contact Us</h1>
-      <p>Get in Touch for Queries, Admissions, and Guidance</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Contact AZL Digital</h1>
+      <p>Reach out to us for courses, guidance, or any questions about studying and working in Korea.</p>
     </div>
   </section>
 
-  <!-- Contact Content -->
-  <main>
-    <section class="contact-content">
-      <h2>We’d Love to Hear From You</h2>
-      <p>Fill the form below or reach out via email or phone. We respond quickly!</p>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+    <div class="contact-container">
 
-      <div class="contact-container">
-        <!-- Contact Form -->
-        <form action="#" method="POST" class="contact-form">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Our Contact</h3>
+        <p>Email: <a href="mailto:azlanguages.digital@gmail.com">azlanguages.digital@gmail.com</a></p>
+        <p>Phone: +92 300 1234567 (Optional Placeholder)</p>
+        <p>Location: Pakistan (Exact Address Coming Soon)</p>
+        <p>Follow us on Social Media:</p>
+        <p>
+          <a href="#"><i class="fab fa-facebook"></i> Facebook</a> | 
+          <a href="#"><i class="fab fa-instagram"></i> Instagram</a> | 
+          <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        </p>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form action="mailto:azlanguages.digital@gmail.com" method="post" enctype="text/plain">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
+          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
         </form>
-
-        <!-- Contact Info -->
-        <div class="contact-info">
-          <h3>Contact Information</h3>
-          <p><i class="fas fa-envelope"></i> info@webwaytokorea.com</p>
-          <p><i class="fas fa-phone"></i> +92 300 1234567</p>
-          <p><i class="fas fa-map-marker-alt"></i> Islamabad, Pakistan</p>
-        </div>
       </div>
-    </section>
-  </main>
+
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 WebWayToKorea | All Rights Reserved</p>
+    <p>&copy; 2026 AZL Digital | All Rights Reserved | Email: <a href="mailto:azlanguages.digital@gmail.com">azlanguages.digital@gmail.com</a></p>
   </footer>
 
 </body>
