@@ -1,17 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WebWayToKorea | Courses</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AZL Digital | Courses</title>
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {margin:0; font-family:'Segoe UI',sans-serif;}
+    nav {
+      display:flex; justify-content:space-between; align-items:center; padding:15px 50px; background-color:#004080; color:#fff; position:sticky; top:0; z-index:1000;
+    }
+    nav .logo {font-size:1.8rem; font-weight:bold; color:#ffd700; text-shadow:1px 1px 3px rgba(0,0,0,0.4);}
+    nav ul {display:flex; gap:25px; list-style:none;}
+    nav ul li a {color:#fff; text-decoration:none; font-weight:500; transition:0.3s;}
+    nav ul li a:hover, nav ul li a.active {color:#ffd700;}
+
+    /* Hero */
+    .hero {background:url('images/Classroom.avif') center/cover no-repeat; height:300px; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; position:relative;}
+    .hero::before {content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4);}
+    .hero-content {position:relative; max-width:900px;}
+    .hero-content h1 {font-size:2.8rem; margin-bottom:10px;}
+    .hero-content p {font-size:1.2rem;}
+
+    /* Course Sections */
+    .course-section {padding:60px 20px; max-width:1200px; margin:auto;}
+    .course-section h2 {text-align:center; font-size:2.2rem; color:#004080; margin-bottom:20px;}
+    .course-cards {display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin-top:40px;}
+    .course-card {background:#f4f4f4; border-radius:10px; width:320px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,0.1); transition:transform 0.3s;}
+    .course-card:hover {transform:translateY(-10px) scale(1.02);}
+    .course-card img {width:100%; height:180px; border-radius:10px; object-fit:cover; margin-bottom:15px;}
+    .course-card h3 {color:#004080; margin-bottom:10px;}
+    .course-card p {font-size:1rem; line-height:1.5; margin-bottom:15px;}
+    .course-card .btn-small {text-decoration:none; color:#004080; font-weight:bold; background-color:#ffd700; padding:10px 20px; border-radius:5px; transition:0.3s;}
+    .course-card .btn-small:hover {background-color:#e6c200;}
+
+    footer {background:#004080; color:#fff; text-align:center; padding:20px;}
+    footer a {color:#ffd700; text-decoration:none;}
+
+    @media(max-width:900px){
+      .course-card {width:90%;}
+      .hero-content h1{font-size:2rem;}
+    }
+
+  </style>
 </head>
 <body>
 
   <!-- Navigation -->
   <nav>
-    <div class="logo">WebWayToKorea</div>
+    <div class="logo">AZL Digital</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="vision.html">Our Vision</a></li>
@@ -21,72 +59,55 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1581093448795-1c246cf7f73c');">
-    <div class="hero-text">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
       <h1>Our Courses</h1>
-      <p>Learn, Apply, and Go to South Korea with Confidence</p>
+      <p>Structured learning for Work, Study, and H-1 Visa programs in Korea.</p>
     </div>
   </section>
 
-  <!-- Courses Content -->
-  <main>
-    <section class="courses-content">
-      <h2>Official Pathways to South Korea (Agent-Free)</h2>
-
-      <!-- EPS Work System -->
+  <!-- Courses -->
+  <section class="course-section">
+    <h2>Work in Korea (EPS)</h2>
+    <div class="course-cards">
       <div class="course-card">
-        <i class="fas fa-briefcase fa-2x"></i>
-        <h3>Work: EPS Employment Permit System</h3>
-        <p>This is the official and safest government-to-government system for non-professional jobs in manufacturing, agriculture, fisheries, and construction.</p>
-        <ul>
-          <li><strong>Step 1: Master the Language:</strong> Pass the TOPIK (Test of Proficiency in Korean).</li>
-          <li><strong>Step 2: Get on the Roster:</strong> After passing EPS-TOPIK, register at designated centers (OEEC in Islamabad, Karachi, Peshawar, Quetta, Lahore).</li>
-          <li><strong>Step 3: Job Selection & Visa:</strong> Employers select from roster, medical exams, contract signing, E-9 Visa application at Korean Embassy.</li>
-        </ul>
-        <p><strong>Key Resource:</strong> Pakistan OEC website & HRD Korea.</p>
+        <img src="images/FactoryWorker.avif" alt="EPS Work">
+        <h3>EPS Employment Permit</h3>
+        <p>Government-to-government system for non-professional jobs in manufacturing, agriculture, fisheries, and construction. Learn Korean, pass TOPIK, get on the roster, and apply safely.</p>
+        <a href="contact.html" class="btn-small">Enroll Now</a>
       </div>
+    </div>
+  </section>
 
-      <!-- Study Courses -->
+  <section class="course-section" id="study">
+    <h2>Study in Korea</h2>
+    <div class="course-cards">
       <div class="course-card">
-        <i class="fas fa-graduation-cap fa-2x"></i>
-        <h3>Study: Direct University Application</h3>
-        <p>For Bachelor, Master, PhD, or Korean language courses. Apply directly to universities without agents.</p>
-        <ul>
-          <li><strong>Step 1: Research & Choose:</strong> Study in Korea (<a href="https://www.studyingkorea.go.kr" target="_blank">www.studyingkorea.go.kr</a>) or university websites.</li>
-          <li><strong>Step 2: Meet Requirements:</strong> Transcripts, finances, study plan, recommendation letters. TOPIK for Korean programs, TOEFL/IELTS for English programs.</li>
-          <li><strong>Step 3: Apply Directly:</strong> Submit online/post to international admissions. Receive Visa Issuance Number (D-2/D-4).</li>
-          <li><strong>Step 4: Apply for Visa:</strong> Bring admission letter & Visa Issuance Number to Korean Embassy in Islamabad.</li>
-        </ul>
+        <img src="images/Classroom.avif" alt="Study">
+        <h3>Language & Degree Programs</h3>
+        <p>Direct university applications for Bachelor's, Master's, PhD, or Korean language courses. Prepare documents, submit online, and secure your student visa safely.</p>
+        <a href="contact.html" class="btn-small">Apply Now</a>
       </div>
+    </div>
+  </section>
 
-      <!-- H-1 Working Holiday -->
+  <section class="course-section" id="h1">
+    <h2>H-1 Working Holiday</h2>
+    <div class="course-cards">
       <div class="course-card">
-        <i class="fas fa-plane fa-2x"></i>
-        <h3>H-1 Working Holiday Visa</h3>
-        <p>For young Pakistanis (if bilateral agreement is active). Live, travel, and work part-time in Korea for a year. Apply directly at Korean Embassy. Proof of funds, travel insurance, clean record required.</p>
+        <img src="images/Traveler.avif" alt="Working Holiday">
+        <h3>Work & Travel Korea</h3>
+        <p>For young professionals (when the agreement is active). Live, travel, and work part-time in Korea legally for a year. Proof of funds and insurance required.</p>
+        <a href="contact.html" class="btn-small">Start Now</a>
       </div>
-
-      <!-- Crucial Steps -->
-      <div class="course-card">
-        <i class="fas fa-check-circle fa-2x"></i>
-        <h3>Crucial DIY Steps</h3>
-        <ol>
-          <li>Learn Korean: Pass EPS-TOPIK or aim for TOPIK Level 3+</li>
-          <li>Gather Documents Yourself: Police certificate, attested education, financial proof</li>
-          <li>Use Official Websites Only: Korean Embassy, POEA, HRD Korea, University Websites</li>
-          <li>Prepare for Costs: Fees, tests, attestation, visa, flights. Avoid "guaranteed job" scams.</li>
-        </ol>
-      </div>
-
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 WebWayToKorea | All Rights Reserved</p>
+    <p>&copy; 2026 AZL Digital | All Rights Reserved | Email: <a href="mailto:azlanguages.digital@gmail.com">azlanguages.digital@gmail.com</a></p>
   </footer>
 
 </body>
 </html>
-
