@@ -29,9 +29,9 @@ header p {
   font-size: 1.2rem;
 }
 
-/* Main Section */
+/* Main Sections */
 main {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
@@ -42,9 +42,36 @@ section h2 {
   color: #0b3c5d;
 }
 
-section p {
+section h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #0b3c5d;
+}
+
+section h4 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #0b3c5d;
+}
+
+section p, section li {
   font-size: 1.1rem;
+  margin-bottom: 10px;
   color: #444;
+}
+
+ul, ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #0b3c5d;
+  color: #fff;
+  margin-top: 50px;
 }
 
 /* Responsive */
@@ -54,5 +81,8 @@ section p {
   }
   section h2 {
     font-size: 1.5rem;
+  }
+  section h3 {
+    font-size: 1.2rem;
   }
 }
