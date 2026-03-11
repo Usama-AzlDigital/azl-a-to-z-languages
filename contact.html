@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact | AZL Digital</title>
+<title>Contact Us | AZL Digital</title>
 <link rel="stylesheet" href="styles.css">
-<meta name="description" content="Contact AZL Digital to enroll in language courses, ask questions, or get guidance for Korean, Chinese, Japanese, German, and English courses.">
+<meta name="description" content="Contact AZL Digital for language courses, inquiries, or partnership. Email or WhatsApp us for details.">
 </head>
 <body>
-
 <header>
 <div class="logo">AZL DIGITAL</div>
 <nav>
@@ -20,40 +19,47 @@
 </nav>
 </header>
 
-<section class="section">
-<h2>Contact AZL Digital</h2>
-<p>We’re here to answer your questions, provide guidance, and help you enroll in our language programs. Reach out via email, WhatsApp, or the form below.</p>
-
-<div class="grid">
-<div class="card">
-<h3>Email & WhatsApp</h3>
-<p>Email: <a href="mailto:azlanguages.digital@gmail.com">azlanguages.digital@gmail.com</a></p>
-<p>WhatsApp: <a href="https://wa.me/923052201961">+92 305 220 1961</a></p>
+<section class="hero">
+<div class="hero-overlay">
+<h1>Contact AZL Digital</h1>
+<p>Reach out to us for course details, enrollment, or any questions about language learning programs. We respond quickly via WhatsApp and email.</p>
+<a class="button" href="https://wa.me/923052201961" target="_blank">Send Us a WhatsApp Message</a>
 </div>
+</section>
 
-<div class="card">
-<h3>Send Us A Message</h3>
-<form action="https://formspree.io/f/your-form-id" method="POST">
-<input type="text" name="name" placeholder="Full Name" required>
-<input type="email" name="email" placeholder="Email Address" required>
-<input type="tel" name="phone" placeholder="Phone Number" required>
+<section class="section">
+<h2>Contact Information</h2>
+<p><strong>Email:</strong> <a href="mailto:azlanguages.digital@gmail.com">azlanguages.digital@gmail.com</a></p>
+<p><strong>WhatsApp:</strong> <a href="https://wa.me/923052201961">+92 305 220 1961</a></p>
+<p><strong>Phone:</strong> +92 305 220 1961</p>
+<p><strong>Note:</strong> Physical address is currently not available. All communication is online or via WhatsApp/email for safety and efficiency.</p>
+</section>
+
+<section class="section">
+<h2>Send a Message</h2>
+<form action="#" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
 <textarea name="message" placeholder="Your Message" required></textarea>
-<button type="submit">Send Message</button>
+<button type="submit" class="button">Send Message</button>
 </form>
-</div>
-</div>
-
-<section class="section">
-<h2>Our Location</h2>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </section>
 
 <footer>
-<p>Email: azlanguages.digital@gmail.com</p>
+<p>Email: <a href="mailto:azlanguages.digital@gmail.com">azlanguages.digital@gmail.com</a></p>
 <p>WhatsApp: <a href="https://wa.me/923052201961">+92 305 220 1961</a></p>
 <p>Website Created From Scratch By Jafri</p>
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/923052201961">WhatsApp</a>
+
+<script>
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); } });
+},{threshold:0.2});
+sections.forEach(section => observer.observe(section));
+</script>
+
 </body>
 </html>
