@@ -1,113 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AZL Digital | Courses</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <style>
-    body {margin:0; font-family:'Segoe UI',sans-serif;}
-    nav {
-      display:flex; justify-content:space-between; align-items:center; padding:15px 50px; background-color:#004080; color:#fff; position:sticky; top:0; z-index:1000;
-    }
-    nav .logo {font-size:1.8rem; font-weight:bold; color:#ffd700; text-shadow:1px 1px 3px rgba(0,0,0,0.4);}
-    nav ul {display:flex; gap:25px; list-style:none;}
-    nav ul li a {color:#fff; text-decoration:none; font-weight:500; transition:0.3s;}
-    nav ul li a:hover, nav ul li a.active {color:#ffd700;}
 
-    /* Hero */
-    .hero {background:url('images/Classroom.avif') center/cover no-repeat; height:300px; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; position:relative;}
-    .hero::before {content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4);}
-    .hero-content {position:relative; max-width:900px;}
-    .hero-content h1 {font-size:2.8rem; margin-bottom:10px;}
-    .hero-content p {font-size:1.2rem;}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* Course Sections */
-    .course-section {padding:60px 20px; max-width:1200px; margin:auto;}
-    .course-section h2 {text-align:center; font-size:2.2rem; color:#004080; margin-bottom:20px;}
-    .course-cards {display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin-top:40px;}
-    .course-card {background:#f4f4f4; border-radius:10px; width:320px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,0.1); transition:transform 0.3s;}
-    .course-card:hover {transform:translateY(-10px) scale(1.02);}
-    .course-card img {width:100%; height:180px; border-radius:10px; object-fit:cover; margin-bottom:15px;}
-    .course-card h3 {color:#004080; margin-bottom:10px;}
-    .course-card p {font-size:1rem; line-height:1.5; margin-bottom:15px;}
-    .course-card .btn-small {text-decoration:none; color:#004080; font-weight:bold; background-color:#ffd700; padding:10px 20px; border-radius:5px; transition:0.3s;}
-    .course-card .btn-small:hover {background-color:#e6c200;}
+<title>Courses | AZL Digital</title>
 
-    footer {background:#004080; color:#fff; text-align:center; padding:20px;}
-    footer a {color:#ffd700; text-decoration:none;}
+<link rel="stylesheet" href="styles.css">
 
-    @media(max-width:900px){
-      .course-card {width:90%;}
-      .hero-content h1{font-size:2rem;}
-    }
-
-  </style>
 </head>
+
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <div class="logo">AZL Digital</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="vision.html">Our Vision</a></li>
-      <li><a href="courses.html" class="active">Courses</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+<header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Our Courses</h1>
-      <p>Structured learning for Work, Study, and H-1 Visa programs in Korea.</p>
-    </div>
-  </section>
+<div class="logo">AZL DIGITAL</div>
 
-  <!-- Courses -->
-  <section class="course-section">
-    <h2>Work in Korea (EPS)</h2>
-    <div class="course-cards">
-      <div class="course-card">
-        <img src="images/FactoryWorker.avif" alt="EPS Work">
-        <h3>EPS Employment Permit</h3>
-        <p>Government-to-government system for non-professional jobs in manufacturing, agriculture, fisheries, and construction. Learn Korean, pass TOPIK, get on the roster, and apply safely.</p>
-        <a href="contact.html" class="btn-small">Enroll Now</a>
-      </div>
-    </div>
-  </section>
+<nav>
+<a href="index.html">Home</a>
+<a href="vision.html">Our Vision</a>
+<a href="courses.html">Courses</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
 
-  <section class="course-section" id="study">
-    <h2>Study in Korea</h2>
-    <div class="course-cards">
-      <div class="course-card">
-        <img src="images/Classroom.avif" alt="Study">
-        <h3>Language & Degree Programs</h3>
-        <p>Direct university applications for Bachelor's, Master's, PhD, or Korean language courses. Prepare documents, submit online, and secure your student visa safely.</p>
-        <a href="contact.html" class="btn-small">Apply Now</a>
-      </div>
-    </div>
-  </section>
+</header>
 
-  <section class="course-section" id="h1">
-    <h2>H-1 Working Holiday</h2>
-    <div class="course-cards">
-      <div class="course-card">
-        <img src="images/Traveler.avif" alt="Working Holiday">
-        <h3>Work & Travel Korea</h3>
-        <p>For young professionals (when the agreement is active). Live, travel, and work part-time in Korea legally for a year. Proof of funds and insurance required.</p>
-        <a href="contact.html" class="btn-small">Start Now</a>
-      </div>
-    </div>
-  </section>
+<section class="container">
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 AZL Digital | All Rights Reserved | Email: <a href="mailto:azlanguages.digital@gmail.com">azlanguages.digital@gmail.com</a></p>
-  </footer>
+<h1>Our Courses</h1>
+
+<div class="grid">
+
+<div class="card">
+
+<h2>Course 1-A</h2>
+<p>Duration: 1 Month</p>
+
+<p>
+
+Short intensive introduction course designed for beginners.
+
+</p>
+
+<p>
+For pricing contact us on WhatsApp.
+</p>
+
+<a class="button" href="https://wa.me/923052201961" target="_blank">
+Contact For Pricing
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Course 2-B</h2>
+<p>Duration: 3 Months</p>
+
+<p>
+
+Complete beginner to intermediate language course.
+
+</p>
+
+<p>
+For pricing contact us on WhatsApp.
+</p>
+
+<a class="button" href="https://wa.me/923052201961" target="_blank">
+Contact For Pricing
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Course 4-A</h2>
+<p>Duration: 4 Months</p>
+
+<p>
+
+Intermediate language training with exam preparation.
+
+</p>
+
+<p>
+For pricing contact us on WhatsApp.
+</p>
+
+<a class="button" href="https://wa.me/923052201961" target="_blank">
+Contact For Pricing
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Course 6-B</h2>
+<p>Duration: 6 Months</p>
+
+<p>
+
+Full professional level language training course.
+
+</p>
+
+<p>
+For pricing contact us on WhatsApp.
+</p>
+
+<a class="button" href="https://wa.me/923052201961" target="_blank">
+Contact For Pricing
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Email: azlanguages.digital@gmail.com</p>
+
+<p>
+WhatsApp:
+<a href="https://wa.me/923052201961" target="_blank">
++92 305 220 1961
+</a>
+</p>
+
+<p>Website Created From Scratch By Jafri</p>
+
+</footer>
 
 </body>
 </html>
