@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,6 @@
 <meta name="description" content="AZL Digital envisions bridging language gaps and empowering Pakistani students with global opportunities. We provide professional language training for Korean, Chinese, Japanese, German, and English.">
 </head>
 <body>
-
 <header>
 <div class="logo">AZL DIGITAL</div>
 <nav>
@@ -44,12 +43,21 @@
 </section>
 
 <footer>
-<p>Email: azlanguages.digital@gmail.com</p>
+<p>Email: <a href="mailto:azlanguages.digital@gmail.com">azlanguages.digital@gmail.com</a></p>
 <p>WhatsApp: <a href="https://wa.me/923052201961">+92 305 220 1961</a></p>
 <p>Website Created From Scratch By Jafri</p>
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/923052201961">WhatsApp</a>
 
+<script>
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){ entry.target.classList.add('visible'); }
+  });
+},{threshold:0.2});
+sections.forEach(section => observer.observe(section));
+</script>
 </body>
 </html>
