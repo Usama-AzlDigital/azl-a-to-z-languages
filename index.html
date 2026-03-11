@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AZL Digital | A To Z Languages</title>
 <link rel="stylesheet" href="styles.css">
-<meta name="description" content="AZL Digital is a modern language institute helping students master languages to unlock international opportunities. Learn Korean, Chinese, Japanese, German, and English for study, work, and travel.">
+<meta name="description" content="AZL Digital helps students master languages to unlock international opportunities. Learn Korean, Chinese, Japanese, German, and English for study, work, and travel.">
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll("nav a");
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute("href"));
+      if(target) target.scrollIntoView({behavior:"smooth"});
+    });
+  });
+});
+</script>
 </head>
-
 <body>
 
 <header>
 <div class="logo">AZL DIGITAL</div>
 <nav>
-<a href="index.html">Home</a>
+<a href="#home">Home</a>
 <a href="vision.html">Our Vision</a>
 <a href="courses.html">Courses</a>
 <a href="about.html">About</a>
@@ -21,7 +32,7 @@
 </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
 <div class="hero-overlay">
 <h1>Learn Languages. Unlock Global Opportunities.</h1>
 <p>AZL Digital empowers ambitious students to master languages, pursue international careers, study abroad, and explore the world. Opportunities in South Korea, Japan, China, Germany, and more are within your reach when you speak the language fluently and confidently.</p>
@@ -46,7 +57,7 @@
 </div>
 </section>
 
-<section class="owner">
+<section class="section owner">
 <h2>Founder & Lead Instructor</h2>
 <h3>SH Zahid Ahmed</h3>
 <p>SH Zahid Ahmed is a dedicated language instructor and founder of AZL Digital. With years of international experience, he specializes in practical language teaching, exam preparation, and cultural integration, guiding students toward global success.</p>
@@ -55,20 +66,31 @@
 <section class="section">
 <h2>Our Learning Environment</h2>
 <div class="image-grid">
-<img src="images/classroom.avif">
-<img src="images/factoryworker.avif">
-<img src="images/traveler.avif">
-<img src="images/koreanflag.avif">
-<img src="images/traveler2.avif">
+<img src="images/classroom.avif" alt="Classroom">
+<img src="images/factoryworker.avif" alt="Factory Worker">
+<img src="images/traveler.avif" alt="Traveler">
+<img src="images/koreanflag.avif" alt="Korean Flag">
+<img src="images/traveler2.avif" alt="Traveler 2">
 </div>
 </section>
 
 <footer>
-<p>Email: azlanguages.digital@gmail.com</p>
+<p>Email: <a href="mailto:azlanguages.digital@gmail.com">azlanguages.digital@gmail.com</a></p>
 <p>WhatsApp: <a href="https://wa.me/923052201961">+92 305 220 1961</a></p>
 <p>Website Created From Scratch By Jafri</p>
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/923052201961">WhatsApp</a>
+
+<script>
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){ entry.target.classList.add('visible'); }
+  });
+},{threshold:0.2});
+sections.forEach(section => observer.observe(section));
+</script>
+
 </body>
 </html>
