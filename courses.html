@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Courses | AZL Digital</title>
 <link rel="stylesheet" href="styles.css">
-<meta name="description" content="Explore AZL Digital language courses. We teach Korean, Chinese, Japanese, German, and English with practical and professional training for work, study, and travel. Contact us for course enrollment.">
+<meta name="description" content="Explore AZL Digital courses. Korean, Chinese, Japanese, German, and English classes with flexible durations. Contact us to get course details.">
 </head>
 <body>
-
 <header>
 <div class="logo">AZL DIGITAL</div>
 <nav>
@@ -20,65 +19,52 @@
 </nav>
 </header>
 
-<section class="section">
-<h2>Our Language Programs</h2>
-<p>AZL Digital offers structured language courses from beginner to professional levels. Each program includes vocabulary, grammar, conversation, cultural insights, and exam preparation. We provide immersive practice and guidance to ensure students are globally competent.</p>
-
-<div class="grid">
-<div class="card">
-<h3>Course 1-A</h3>
-<p>Duration: 1 Month</p>
-<p>Intensive introduction covering basics of language, pronunciation, essential conversation, and alphabets.</p>
-<a class="button" href="https://wa.me/923052201961">Contact For Pricing</a>
-</div>
-
-<div class="card">
-<h3>Course 2-B</h3>
-<p>Duration: 3 Months</p>
-<p>Beginner to intermediate program developing grammar, conversational fluency, and listening comprehension.</p>
-<a class="button" href="https://wa.me/923052201961">Contact For Pricing</a>
-</div>
-
-<div class="card">
-<h3>Course 4-A</h3>
-<p>Duration: 4 Months</p>
-<p>Intermediate program focusing on communication skills, workplace vocabulary, and practical exercises.</p>
-<a class="button" href="https://wa.me/923052201961">Contact For Pricing</a>
-</div>
-
-<div class="card">
-<h3>Course 6-B</h3>
-<p>Duration: 6 Months</p>
-<p>Advanced professional course with full preparation for language exams, academic studies, and workplace readiness abroad.</p>
-<a class="button" href="https://wa.me/923052201961">Contact For Pricing</a>
-</div>
+<section class="hero">
+<div class="hero-overlay">
+<h1>Courses Designed for Global Success</h1>
+<p>Our language courses are structured for practical fluency, exam preparation, and professional application. Learn the skills you need to study, work, or travel abroad confidently.</p>
+<a class="button" href="https://wa.me/923052201961" target="_blank">Contact for Course Details</a>
 </div>
 </section>
 
 <section class="section">
-<h2>Enrollment Form</h2>
-<form action="https://formspree.io/f/your-form-id" method="POST">
-<input type="text" name="name" placeholder="Full Name" required>
-<input type="email" name="email" placeholder="Email Address" required>
-<input type="tel" name="phone" placeholder="Phone Number" required>
-<select name="course" required>
-<option value="">Select Course</option>
-<option value="1-A">Course 1-A (1 Month)</option>
-<option value="2-B">Course 2-B (3 Months)</option>
-<option value="4-A">Course 4-A (4 Months)</option>
-<option value="6-B">Course 6-B (6 Months)</option>
-</select>
-<textarea name="message" placeholder="Any Message or Questions"></textarea>
-<button type="submit">Enroll Now</button>
-</form>
+<h2>Course Categories</h2>
+<p>We offer flexible durations to fit your learning goals. Choose from 1-month, 3-month, 4-month, and 6-month courses. Every course is designed for maximum immersion and skill retention.</p>
+
+<div class="grid">
+<div class="card"><h3>Course 1-A (1 Month)</h3><p>Short intensive courses focusing on core fundamentals and rapid language acquisition. Ideal for beginners seeking a fast start.</p></div>
+<div class="card"><h3>Course 2-B (3 Months)</h3><p>Extended program combining conversational skills, grammar, and real-world exercises. Suitable for serious learners aiming for proficiency.</p></div>
+<div class="card"><h3>Course 4-A (4 Months)</h3><p>Comprehensive courses with advanced lessons, cultural orientation, and exam preparation strategies. Perfect for students targeting TOPIK or international tests.</p></div>
+<div class="card"><h3>Course 6-B (6 Months)</h3><p>Full-length program for in-depth mastery of the language. Includes intensive speaking, listening, writing, and reading modules for professional fluency.</p></div>
+</div>
+</section>
+
+<section class="section">
+<h2>Languages Offered</h2>
+<div class="grid">
+<div class="card"><h3>Korean</h3><p>EPS, TOPIK prep, conversational and workplace Korean.</p></div>
+<div class="card"><h3>Chinese</h3><p>Mandarin language for business, study, and travel.</p></div>
+<div class="card"><h3>Japanese</h3><p>Japanese for professional and cultural integration.</p></div>
+<div class="card"><h3>German</h3><p>German for study, work, and life in Europe.</p></div>
+<div class="card"><h3>English</h3><p>Professional English, academic preparation, and fluency for global communication.</p></div>
+</div>
 </section>
 
 <footer>
-<p>Email: azlanguages.digital@gmail.com</p>
+<p>Email: <a href="mailto:azlanguages.digital@gmail.com">azlanguages.digital@gmail.com</a></p>
 <p>WhatsApp: <a href="https://wa.me/923052201961">+92 305 220 1961</a></p>
 <p>Website Created From Scratch By Jafri</p>
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/923052201961">WhatsApp</a>
+
+<script>
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); } });
+},{threshold:0.2});
+sections.forEach(section => observer.observe(section));
+</script>
+
 </body>
 </html>
